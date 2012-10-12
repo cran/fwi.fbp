@@ -17,7 +17,7 @@ The FBP System (Forestry Canada Fire Danger Group. 1992; Hirsch 1996) provides a
 \tabular{ll}{
 Package: \tab fwi.fbp\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 1.01\cr
 Date: \tab 2012-10-12\cr
 License: \tab GPL-2\cr
 }

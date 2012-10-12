@@ -1,4 +1,4 @@
-9936443a316b95c3c7a9388cde7d1445 *DESCRIPTION
+753a73c64cb8a42096b3ee746f69f0c1 *DESCRIPTION
 df390c53434517b304ac5db487184641 *NAMESPACE
 8588db96ca35b6f97c5c7fc3a1d64bd6 *R/BEcalc.r
 e2fd2fc1ef06d44e4fb5d302fcdb82e1 *R/BROScalc.r
@@ -17,15 +17,15 @@ a3eef7998c76802149154e1e70bfa171 *R/ROSthetacalc.r
 701dd8d262f1f1531feb598c17183c00 *R/SFCcalc.r
 87b7c549974a15a30ca319effee17241 *R/Slopecalc.r
 9c873c9c42f5a9589ad6f05ad63ba5db *R/TFCcalc.r
-dd308b15c4d97535d77d081472d9f8ff *R/fbp.r
+1297de75446c2958e23f24d0c67240c0 *R/fbp.r
 1eb25b26cd9651953db02a70bf690f52 *R/fwi.r
 f6312720e1b14c52d10360970c77ac29 *R/fwiBAT.r
 c82e55c3bd0853d8f5c81eda816141b6 *R/fwiBAT0.r
-454c975175ecda9d7dea0e5f12cb3032 *data/test_fbp.csv.gz
-c98fe172df5da8fcab83ef626a0cdcc9 *data/test_fwi.csv.gz
+6d85b33ef6a6cb5f5e367b971775aa75 *data/test_fbp.csv.gz
+a71fc24a36de0ec48cf357d21f440f96 *data/test_fwi.csv.gz
 11e6dbbbcfaf00cba6597fc7676b5407 *man/fbp.Rd
 5e0f4639d1ca3d85ae5925beea8312dd *man/fwi.Rd
-ad69a3226eb50b1573d2565b9818f10b *man/fwi.fbp-package.Rd
+a6ec289f63dfdc649f6d8c09865895cc *man/fwi.fbp-package.Rd
 9128362f5a9b571dba4c07a6850d733f *man/fwiBAT.Rd
 a661196c547204c74816d1fc946579f7 *man/test_fbp.Rd
 5b717298aadba42e07b4017691fe1651 *man/test_fwi.Rd

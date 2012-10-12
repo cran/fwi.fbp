@@ -2,10 +2,10 @@ Package: fwi.fbp
 Type: Package
 Title: Fire Weather Index System and Fire Behaviour Prediction System
         Calculations
-Version: 1.0
+Version: 1.01
 Date: 2012-10-12
-Author: Xianli Wang, Alan Cantin, Marc-Andr&eacute; Parisien, Mike
-        Wotton, Kerry Anderson, and Mike Flannigan
+Author: Xianli Wang, Alan Cantin, Marc-Andre Parisien, Mike Wotton,
+        Kerry Anderson, and Mike Flannigan
 Maintainer: Alan Cantin <Alan.Cantin@RNCan-NRCan.gc.ca>
 Depends: R (>= 2.11.0)
 Description: This package provides three new functions to calculate the
@@ -15,9 +15,6 @@ Description: This package provides three new functions to calculate the
 License: GPL-2
 URL: https://r-forge.r-project.org/projects/fwi-fbp/
 BugReports: https://r-forge.r-project.org/tracker/?group_id=1453
+Packaged: 2012-10-30 13:50:11 UTC; alancan
 Repository: CRAN
-Repository/R-Forge/Project: fwi-fbp
-Repository/R-Forge/Revision: 51
-Repository/R-Forge/DateTimeStamp: 2012-10-24 16:19:13
-Date/Publication: 2012-10-25 06:15:25
-Packaged: 2012-10-24 18:22:14 UTC; rforge
+Date/Publication: 2012-10-30 17:28:39

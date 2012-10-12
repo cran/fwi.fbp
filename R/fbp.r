@@ -183,16 +183,21 @@ if (output=="SECONDARY"|output=="ALL"|output =="S"|output =="A"){
   }
   if (exists("ID")) ID<-ID else ID <- row.names(input)  
   if (output == "PRIMARY"|output == "P"){
-      FBP    <- data.frame(ID,CFB,CFC,FD,HFI,RAZ,ROS,SFC,TFC)
-      FBP[,2:ncol(FBP)]<-apply(FBP[,2:ncol(FBP)],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
-      FBP} else
+    FBP    <- data.frame(ID,CFB,CFC,FD,HFI,RAZ,ROS,SFC,TFC)
+    FBP[,c(2:3,5:ncol(FBP))]<-apply(FBP[,c(2:3,5:ncol(FBP))],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
+    FBP[,"FD"]<-as.character(FBP[,"FD"])
+    FBP[,"FD"]<-ifelse(FUELTYPE %in% c("WA","NF"),"NA",FBP[,"FD"])
+    FBP} else
   if (output == "SECONDARY"|output == "S"){
-      FBP    <- data.frame(ID,BE,SF,ISI,FFMC,FMC,D0,RSO,CSI,FROS,BROS,HROSt,FROSt,BROSt,FCFB,BCFB,FFI,BFI,FTFC,BTFC,TI,FTI,BTI,LB,LBt,WSV,DH,DB,DF,TROS,TROSt,TCFB,TFI,TTFC,TTI)
-      FBP[,2:ncol(FBP)]<-apply(FBP[,2:ncol(FBP)],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
-      FBP} else
+    FBP    <- data.frame(ID,BE,SF,ISI,FFMC,FMC,D0,RSO,CSI,FROS,BROS,HROSt,FROSt,BROSt,FCFB,BCFB,FFI,BFI,FTFC,BTFC,TI,FTI,BTI,LB,LBt,WSV,DH,DB,DF,TROS,TROSt,TCFB,TFI,TTFC,TTI)
+    FBP[,2:ncol(FBP)]<-apply(FBP[,2:ncol(FBP)],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
+    FBP} else
   if (output == "ALL"|output == "A") {
-      FBP    <- data.frame(ID,CFB,CFC,FD,HFI,RAZ,ROS,SFC,TFC,BE,SF,ISI,FFMC,FMC,D0,RSO,CSI,FROS,BROS,HROSt,FROSt,BROSt,FCFB,BCFB,FFI,BFI,FTFC,BTFC,TI,FTI,BTI,LB,LBt,WSV,DH,DB,DF,TROS,TROSt,TCFB,TFI,TTFC,TTI)
-      FBP[,2:ncol(FBP)]<-apply(FBP[,2:ncol(FBP)],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
-      FBP} 
+    FBP    <- data.frame(ID,CFB,CFC,FD,HFI,RAZ,ROS,SFC,TFC,BE,SF,ISI,FFMC,FMC,D0,RSO,CSI,FROS,BROS,HROSt,FROSt,BROSt,FCFB,BCFB,FFI,BFI,FTFC,BTFC,TI,FTI,BTI,LB,LBt,WSV,DH,DB,DF,TROS,TROSt,TCFB,TFI,TTFC,TTI)
+    FBP[,c(2:3,5:ncol(FBP))]<-apply(FBP[,c(2:3,5:ncol(FBP))],2,function(.x) ifelse(FUELTYPE %in% c("WA","NF"),0,.x))
+    FBP[,"FD"]<-as.character(FBP[,"FD"])
+    FBP[,"FD"]<-ifelse(FUELTYPE %in% c("WA","NF"),"NA",FBP[,"FD"])
+    FBP} 
+
 }
 
