@@ -7,7 +7,8 @@ Fire Weather Index batch function
 fwiBAT generates Fire Weather Index (FWI) System outputs for one weather station during a continuous period of time. This is a high-level function in which FWI System components are calculated from a list of consecutive (e.g., all days of a fire season). For maximum flexibility, the low-level function fwi should be used. 
 }
 \usage{
-fwiBAT(input,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",lat.adjust="TRUE")
+fwiBAT(input,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",
+       lat.adjust="TRUE")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -15,7 +16,8 @@ fwiBAT(input,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",lat.adjust
     A dataframe containing input variables of daily weather observations taken at noon LST. Variable names have to be the same as in the following list, but they are case insensitive. The order in which the input variables are entered is not important. 
     
     \tabular{lll}{
-        \var{id}   \tab (optional) \tab Unique identifier of a weather station or spatial point (no restriction on data type)\cr
+        \var{id}   \tab (optional) \tab Unique identifier of a weather station or spatial point (no restriction on\cr\tab\tab
+                                        data type)\cr
         \var{lat}  \tab (recommended) \tab Latitude (decimal degree, default=55)\cr
         \var{long} \tab (optional) \tab Longitude (decimal degree)\cr
         \var{yr}   \tab (optional) \tab Year of observation\cr
@@ -34,7 +36,8 @@ fwiBAT(input,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",lat.adjust
         \var{ffmc_yda} \tab Fine Fuel Moisture Code (FFMC; unitless) of the previous day. Default value is 85.\cr
         \var{dmc_yda} \tab Duff Moisture Code (DMC; unitless) of the previous day. Default value is 6.\cr
         \var{dc_yda} \tab Drought Code (DC; unitless) of the previous day. Default value is 15.\cr
-        \var{lat} \tab Latitude of the weather station (optional, default=55). Latitude values are used to make day length adjustments in the function.\cr
+        \var{lat} \tab Latitude of the weather station (optional, default=55). Latitude values are used to make \cr\tab
+                       day length adjustments in the function.\cr
     }
   }
   \item{out}{

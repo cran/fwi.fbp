@@ -7,7 +7,8 @@ Fire Weather Index function
 \code{\link{fwi}} is used to calculate the outputs of the Fire Weather Index (FWI) System for one day based on noon local standard time (LST) weather observations of temperature, relative humidity, wind speed, and 24-hour rainfall, as well as the previous day's weather conditions. This function could be used for either one weather station or for multiple weather stations or a gridded surface. This is a lower-level function that allows for maximum flexibility in FWI System component calculations. This package also contains a similar high-level function, \code{\link{fwiBAT}},to calculate FWI System outputs for an entire fire season at one weather station. 
 }
 \usage{
-fwi(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15, lat=55),out="all",lat.adjust="TRUE")
+fwi(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15, lat=55),
+    out="all",lat.adjust="TRUE")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -15,7 +16,8 @@ fwi(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15, lat=55),out="all"
     A dataframe containing input variables of daily weather observations taken at noon LST. Variable names have to be the same as in the following list, but they are case insensitive. The order in which the input variables are entered is not important. 
 
     \tabular{lll}{
-        \var{id}   \tab (optional) \tab Unique identifier of a weather station or spatial point (no restriction on data type)\cr
+        \var{id}   \tab (optional) \tab Unique identifier of a weather station or spatial point (no restriction on\cr\tab\tab
+                                        data type)\cr
         \var{lat}  \tab (recommended) \tab Latitude (decimal degree, default=55)\cr
         \var{long} \tab (optional) \tab Longitude (decimal degree)\cr
         \var{yr}   \tab (optional) \tab Year of observation\cr
@@ -37,7 +39,8 @@ fwi(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15, lat=55),out="all"
         \var{ffmc_yda} \tab Fine Fuel Moisture Code (FFMC; unitless) of the previous day. Default value is 85.\cr
         \var{dmc_yda} \tab Duff Moisture Code (DMC; unitless) of the previous day. Default value is 6.\cr
         \var{dc_yda} \tab Drought Code (DC; unitless) of the previous day. Default value is 15.\cr
-        \var{lat} \tab Latitude of the weather station (optional, default=55). Latitude values are used to make day length adjustments in the function.\cr
+        \var{lat} \tab Latitude of the weather station (optional, default=55). Latitude values are used to make\cr\tab
+                      day length adjustments in the function.\cr
     }
   }
   \item{out}{

@@ -15,8 +15,13 @@ fbp(input, output="Primary")
     
     \tabular{lll}{
         \bold{Inputs} \tab \bold{Full names of inputs} \tab \bold{Defaults}\cr
-        \var{id} \tab Unique identifier of a weather station or spatial point (no restriction on data type). Will use row.names of the Inputs dataset if not specified \tab N/A\cr
-        \var{FuelType} \tab FBP System Fuel Types including "C-1", "C-2", "C-3", "C-4", "C-5", "C-6", "C-7", "D-1", "M-1", "M-2", "M-3", "M-4", "S-1", "S-2", "S-3", "O-1a", and "O-1b". "WA" and "NF" stand for "water" and "non-fuel", respectively. The "-" in the Fuel Type names could be omitted, and the Fuel Type names are also case-insensitive.   \tab "C2"\cr
+        \var{id} \tab Unique identifier of a weather station or spatial point (no restriction on\cr\tab
+                      data type). Will use row.names of the Inputs dataset if not specified \tab N/A\cr
+        \var{FuelType} \tab FBP System Fuel Types including "C-1", "C-2", "C-3", "C-4", "C-5",\cr\tab
+                            "C-6", "C-7", "D-1", "M-1", "M-2", "M-3", "M-4", "S-1", "S-2",\cr\tab
+                            "S-3", "O-1a", and "O-1b". "WA" and "NF" stand for "water" and\cr\tab 
+                            "non-fuel", respectively. The "-" in the Fuel Type names could\cr\tab
+                             be omitted, and the Fuel Type names are also case-insensitive.\tab "C2"\cr
         \var{LAT} \tab Latitude [decimal degrees] \tab 55\cr
         \var{LON} \tab Longitude [decimal degrees] \tab -120\cr
         \var{ELV***} \tab Elevation [meters above sea level] \tab NA\cr
