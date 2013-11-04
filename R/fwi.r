@@ -105,8 +105,8 @@ fwi <- function(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55
   fF <- 91.9 * exp(-0.1386 * fm) * (1 + (fm^5.31)/49300000)
   isi <- 0.208 * fW * fF
   bui <- ifelse(dmc == 0 & dc == 0, 0, 0.8 * dc * dmc/(dmc + 0.4 * dc))
-  p <- (dmc - bui)/dmc
-  cc <- 0.92 + ((0.0114 * dmc)^1.7)
+  p <- ifelse(dmc==0,0,(dmc-bui)/dmc)
+    cc <- 0.92 + ((0.0114 * dmc)^1.7)
   bui0 <- dmc - cc * p
   bui0 <- ifelse(bui0 < 0, 0, bui0)
   bui <- ifelse(bui < dmc, bui0, bui)

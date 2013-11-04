@@ -17,8 +17,8 @@ The FBP System (Forestry Canada Fire Danger Group. 1992; Hirsch 1996) provides a
 \tabular{ll}{
 Package: \tab fwi.fbp\cr
 Type: \tab Package\cr
-Version: \tab 1.2\cr
-Date: \tab 2013-05-16\cr
+Version: \tab 1.3\cr
+Date: \tab 2013-11-04\cr
 License: \tab GPL-2\cr
 }
 This package includes three functions. Two functions, fwi and fwiBAT, are used for FWI System calculation, whereas one function, fbp, is used for FBP System calculation. These functions are not fully independent: their inputs overlap greatly and the user will have to provide FWI System outputs to calculate FBP System outputs. The fwi function is a low level function that is used to calculate the outputs of the FWI System for one day based on noon local standard time (LST) weather observations of temperature, relative humidity, wind speed, and 24-hour rainfall, as well as the previous day's weather conditions. The fwiBAT function is similar to fwi, but is at a higher level in that it allows the user to directly calculate FWI System outputs from a list of consecutive daily weather observations. The fbp function calculates the outputs of the FBP System based on given set of fire weather conditions (weather observations and their associated FWI System components), fuel type, and slope (optional).
