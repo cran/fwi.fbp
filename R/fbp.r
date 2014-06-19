@@ -33,7 +33,10 @@ if(is.null(input)){                                                             
     ASPECT <- ifelse(ASPECT < 0,ASPECT+360,ASPECT)
     ASPECT <- ASPECT * pi/180
 
-    ACCEL  <- ifelse(is.na(ACCEL)|ACCEL < 0,0,1)	                                                                                                   # line (no accelleration effect) */
+    ACCEL  <- ifelse(is.na(ACCEL)|ACCEL < 0,0,ACCEL)                                              # line (no accelleration effect) */
+    if (length(ACCEL[!ACCEL %in% c(0,1)])>0) warning("Input variable Accel is out of range, will be assigned to 1")
+    ACCEL  <- ifelse(!ACCEL %in% c(0,1),1,ACCEL)
+    
     DJ     <- ifelse(DJ < 0 | DJ > 366,0,DJ)
     DJ     <- ifelse(is.na(DJ),180,DJ)
     D0     <- ifelse(is.na(D0)|D0 < 0 | D0 > 366,0,D0)
@@ -110,6 +113,7 @@ names(CFLs)<-c("C1","C2","C3","C4","C5","C6","C7","D1","M1","M2","M3","M4","S1",
 CFL    <- ifelse(CFL <= 0|CFL>2.0|is.na(CFL),CFLs[FUELTYPE],CFL)
 
 FMC    <- ifelse(FMC <= 0 | FMC > 120 | is.na(FMC),.FMCcalc(LAT, LONG, ELV, DJ, D0),FMC)
+FMC    <- ifelse(FUELTYPE %in% c("D1","S1","S2","S3","O1A","O1B"),0,FMC)
 SFC    <- .SFCcalc(FUELTYPE, FFMC, BUI, PC, GFL)
 BUI    <- ifelse(BUIEFF !=1,0,BUI)
 WSV0   <- .Slopecalc(FUELTYPE, FFMC, BUI, WS, WAZ, GS,SAZ, FMC, SFC, PC, PDF, CC, CBH,ISI,output="WSV")                                     #/* This turns off BUI effect */
@@ -178,7 +182,7 @@ if (output=="SECONDARY"|output=="ALL"|output =="S"|output =="A"){
       TTI<-log(ifelse(1-RSO/TROS > 0,1-RSO/TROS,1))/(-a4)
       
       DH <-ifelse(ACCEL==1,.DISTtcalc(FUELTYPE, ROS, HR, CFB),ROS*HR  )
-      DB <- ifelse(ACCEL==1,.DISTtcalc(FUELTYPE, ROS, HR, CFB),BROS*HR  )
+      DB <- ifelse(ACCEL==1,.DISTtcalc(FUELTYPE, BROS, HR, CFB),BROS*HR  )
       DF <- ifelse(ACCEL==1, (DH+DB)/(LBt*2), (DH+DB)/(LB*2)   )
   }
   if (exists("ID")) ID<-ID else ID <- row.names(input)  
