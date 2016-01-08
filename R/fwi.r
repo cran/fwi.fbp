@@ -1,5 +1,11 @@
 fwi <- function(input,yda.fwi=NULL,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",lat.adjust=TRUE)
 {
+  .Deprecated(new="fwi", 
+              package="cffdrs", 
+              msg="The 'fwi.fbp' package and contained functions are being deprecated and replaced by the 'cffdrs' package, please update your code to use the 'cffdrs' package.",
+              old="fwi")
+  
+  
   ell01 <- c(6.5, 7.5, 9, 12.8, 13.9, 13.9, 12.4, 10.9, 9.4,8, 7, 6)
   ell02 <- c(7.9, 8.4, 8.9, 9.5, 9.9, 10.2, 10.1, 9.7, 9.1,8.6, 8.1, 7.8)
   ell03 <- c(10.1, 9.6, 9.1, 8.5, 8.1, 7.8, 7.9, 8.3, 8.9,9.4, 9.9, 10.2)

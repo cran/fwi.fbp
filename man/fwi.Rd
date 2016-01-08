@@ -1,7 +1,7 @@
 \name{fwi}
 \alias{fwi}
 \title{
-Fire Weather Index function
+Fire Weather Index function, Deprecated
 }
 \description{
 \code{\link{fwi}} is used to calculate the outputs of the Fire Weather Index (FWI) System for one day based on noon local standard time (LST) weather observations of temperature, relative humidity, wind speed, and 24-hour rainfall, as well as the previous day's weather conditions. This function could be used for either one weather station or for multiple weather stations or a gridded surface. This is a lower-level function that allows for maximum flexibility in FWI System component calculations. This package also contains a similar high-level function, \code{\link{fwiBAT}},to calculate FWI System outputs for an entire fire season at one weather station. 
@@ -89,11 +89,6 @@ Xianli Wang, Alan Cantin, Marc-Andre Parisien, Mike Wotton, Kerry Anderson, and 
 3.  Lawson, B.D. and O.B. Armitage. 2008. Weather guide for the Canadian Forest Fire Danger Rating System. Nat. Resour. Can., Can. For. Serv., North. For. Cent., Edmonton, AB.
 
 }
-
-\seealso{
-   \code{\link{fwiBAT}},
-   \code{\link{fbp}}
-}
 \examples{
 library(fwi.fbp)
 # The test data is a standard test
@@ -129,4 +124,3 @@ fwi(test_fwi)[1:3,]
 fwi(test_fwi,lat.adjust=FALSE)[1:3,]
 
 }
-\keyword{ methods }

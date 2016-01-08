@@ -1,4 +1,9 @@
-fbp  <- function(input=NULL,output="Primary"){                                                                                           # The choice of output include: "Primarry" (default), "Secondary", and "All".
+fbp  <- function(input=NULL,output="Primary"){       
+  .Deprecated(new="fbp", 
+              package="cffdrs", 
+              msg="The 'fwi.fbp' package and contained functions are being deprecated and replaced by the 'cffdrs' package, please update your code to use the 'cffdrs' package.",
+              old="fbp")  
+# The choice of output include: "Primarry" (default), "Secondary", and "All".
 ### detach the dataset when it is attached from last fail run
 if(!is.na(charmatch("input",search()))) {detach(input)}
 output<-toupper(output)

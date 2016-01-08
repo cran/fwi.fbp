@@ -1,4 +1,8 @@
 fwiBAT<-function(input,init=c(ffmc_yda=85,dmc_yda=6,dc_yda=15,lat=55),out="all",lat.adjust=TRUE){
+  .Deprecated(new="fwi", 
+              package="cffdrs", 
+              msg="The 'fwi.fbp' package and contained functions are being deprecated and replaced by the 'cffdrs' package, please update your code to use the 'cffdrs' package.",
+              old="fwiBAT")
   out.fwi0<-out.fwi<-NULL
   n0<-round(nrow(input)/365)
   n<-ifelse(365*n0>=nrow(input),n0,n0+1)

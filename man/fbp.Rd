@@ -1,7 +1,7 @@
 \name{fbp}
 \alias{fbp}
 \title{
-Fire Behavior Prediction System function
+Fire Behavior Prediction System function, Deprecated
 }
 \description{
 fbp calculates the outputs from the Canadian Forest Fire Behavior Prediction (FBP) System (Forestry Canada Fire Danger Group 1992) based on given fire weather and fuel moisture conditions (from the Canadian Forest Fire Weather Index (FWI) System (Van Wagner 1987)), fuel type, date, and slope. Fire weather, for the purpose of FBP System calculation, comprises observations of 10 m wind speed and direction at the time of the fire, and two associated outputs from the Fire Weather Index System, the Fine Fuel Moisture Content (ffmc) and Buildup Index (bui). FWI System components can be calculated with the sister functions \code{\link{fwi}} and \code{\link{fwiBAT}}.
@@ -143,11 +143,6 @@ Xianli Wang, Alan Cantin, Marc-Andre Parisien, Mike Wotton, Kerry Anderson, and 
 
 4.  Tymstra, C., Bryce, R.W., Wotton, B.M., Armitage, O.B. 2009. Development and structure of Prometheus: the Canadian wildland fire growth simulation Model. Nat. Resour. Can., Can. For. Serv., North. For. Cent., Edmonton, AB. Inf. Rep. NOR-X-417.  
 }
-
-\seealso{
-   \code{\link{fwi}},
-   \code{\link{fwiBAT}}
-}
 \examples{
 library(fwi.fbp)
 # The dataset is the standard test data
@@ -182,5 +177,3 @@ fbp()
 
 
 }
-
-\keyword{ methods }

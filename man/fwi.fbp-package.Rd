@@ -6,7 +6,7 @@
 Fire Weather Index and Fire Behavior Prediction Systems
 }
 \description{
-The fwi.fbp package allows R users to calculate the outputs of the two main components of the Canadian Forest Fire Danger Rating System (CFFDRS; \url{http://cwfis.cfs.nrcan.gc.ca/en_CA/background/summary/fdr}): the Fire Weather Index (FWI) System (\url{http://cwfis.cfs.nrcan.gc.ca/en_CA/background/summary/fwi}) and the Fire Behaviour Prediction (FBP) System (\url{http://cwfis.cfs.nrcan.gc.ca/en_CA/background/summary/fbp}). These systems are widely used internationally to assess fire danger (FWI System) and quantify fire behavior (FBP System). 
+Allows R users to calculate the outputs of the two main components of the Canadian Forest Fire Danger Rating System (CFFDRS; \url{http://cwfis.cfs.nrcan.gc.ca/background/summary/fdr}): the Fire Weather Index (FWI) System (\url{http://cwfis.cfs.nrcan.gc.ca/background/summary/fwi}) and the Fire Behaviour Prediction (FBP) System (\url{http://cwfis.cfs.nrcan.gc.ca/background/summary/fbp}). These systems are widely used internationally to assess fire danger (FWI System) and quantify fire behavior (FBP System). 
 
 The FWI System (Van Wagner, 1987) is based on the moisture content and the effect of wind of three classes of forest fuels on fire behavior. It consists of six components: three fuel moisture codes (Fire Fuel Moisture Code, Duff Moisture Code, Drought Code), and three fire behavior indexes representing rate of spread (Initial Spread Index), fuel consumption (Buildup Index), and fire intensity (Fire Weather Index). The FWI System outputs are determined from daily noon weather observations: temperature, relative humidity, wind speed, and 24-hour rainfall. 
 
@@ -17,8 +17,8 @@ The FBP System (Forestry Canada Fire Danger Group. 1992; Hirsch 1996) provides a
 \tabular{ll}{
 Package: \tab fwi.fbp\cr
 Type: \tab Package\cr
-Version: \tab 1.5\cr
-Date: \tab 2014-06-19\cr
+Version: \tab 1.7\cr
+Date: \tab 2015-01-07\cr
 License: \tab GPL-2\cr
 }
 This package includes three functions. Two functions, fwi and fwiBAT, are used for FWI System calculation, whereas one function, fbp, is used for FBP System calculation. These functions are not fully independent: their inputs overlap greatly and the user will have to provide FWI System outputs to calculate FBP System outputs. The fwi function is a low level function that is used to calculate the outputs of the FWI System for one day based on noon local standard time (LST) weather observations of temperature, relative humidity, wind speed, and 24-hour rainfall, as well as the previous day's weather conditions. The fwiBAT function is similar to fwi, but is at a higher level in that it allows the user to directly calculate FWI System outputs from a list of consecutive daily weather observations. The fbp function calculates the outputs of the FBP System based on given set of fire weather conditions (weather observations and their associated FWI System components), fuel type, and slope (optional).
@@ -26,7 +26,7 @@ This package includes three functions. Two functions, fwi and fwiBAT, are used f
 \author{
 Xianli Wang, Alan Cantin, Marc-Andre Parisien, Mike Wotton, Kerry Anderson, and Mike Flannigan
 
-Maintainer: Alan Cantin \email{Alan.Cantin@RNCan-NRCan.gc.ca}
+Maintainer: Alan Cantin \email{Alan.Cantin@Canada.ca}
 }
 \references{
 1. Van Wagner, C.E. and T.L. Pickett. 1985. Equations and FORTRAN program for the Canadian Forest Fire Weather Index System. Can. For. Serv., Ottawa, Ont. For. Tech. Rep. 33. 18 p.
@@ -42,13 +42,6 @@ Maintainer: Alan Cantin \email{Alan.Cantin@RNCan-NRCan.gc.ca}
 6. Wotton, B.M., Alexander, M.E., Taylor, S.W. 2009. Updates and revisions to the 1992 Canadian forest fire behavior prediction system. Nat. Resour. Can., Can. For. Serv., Great Lakes For. Cent., Sault Ste. Marie, Ontario, Canada. Information Report GLC-X-10, 45p. \url{http://publications.gc.ca/collections/collection_2010/nrcan/Fo123-2-10-2009-eng.pdf}
 
 7. Tymstra, C., Bryce, R.W., Wotton, B.M., Armitage, O.B. 2009. Development and structure of Prometheus: the Canadian wildland fire growth simulation Model. Nat. Resour. Can., Can. For. Serv., North. For. Cent., Edmonton, AB. Inf. Rep. NOR-X-417.
-}
-
-\keyword{ package }
-\seealso{
-   \code{\link{fwi}},
-   \code{\link{fwiBAT}},
-   \code{\link{fbp}}
 }
 \examples{
 library(fwi.fbp)
